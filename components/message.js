@@ -6,12 +6,19 @@ class Message extends HTMLElement {
     elementId = 'chat-message';
 
     //initialize component (constructor)
-    constructor(message) {
+    constructor(message, time, user) {
         super();
         this.shadowRoot = this.attachShadow({mode: 'open'});
+        this.state = {
+            message: message,
+            user: user,
+            time: time,
+        };
         this.applyTemplate();
         this.attachStyling();
         this.setState('message', message);
+        this.setState('user', user);
+        this.setState('time', time);
     }
 
     connectedCallback() {

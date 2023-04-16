@@ -6,11 +6,11 @@ import {SenderMessage} from './components/senderMessage.js';
 template.attachTemplates();
 
 //create components
-const messageComponent = new Message("Test");
-const senderComponent = new SenderMessage("Test")
+const messageComponent = new Message("eerste", "17:09", "user1");
+const senderComponent = new SenderMessage("tweede", "17:09")
 
 //append components
-const chat = document.getElementById("chat");
+var chat = document.getElementById("chat");
 chat.prepend(senderComponent);
 chat.prepend(messageComponent);
 

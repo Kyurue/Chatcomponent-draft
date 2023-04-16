@@ -6,12 +6,17 @@ class SenderMessage extends HTMLElement {
     elementId = 'sender-message';
 
      //initialize component (constructor)
-    constructor(message) {
+    constructor(message, time) {
         super(); // always call super() first in the ctor.
         this.shadowRoot = this.attachShadow({mode: 'open'});
+        this.state = {
+            message: message,
+            time: time,
+        };
         this.applyTemplate();
         this.attachStyling();
         this.setState('message', message);
+        this.setState('time', time);
     }
 
     connectedCallback() {

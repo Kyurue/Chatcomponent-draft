@@ -2,7 +2,11 @@
 const chatMessage = {
     id: 'chat-message-tpl',
     template: `
-    <p class="message" data-bind="message"></p>
+    <div class="chatMessage">
+        <p class="username" data-bind="user"></p>
+        <p class="message" data-bind="message"></p>
+        <p class="time" data-bind="time"></p>
+    </div>
     `
 }
 
@@ -10,7 +14,10 @@ const chatMessage = {
 const senderMessage = {
     id: 'sender-message-tpl',
     template: `
-    <p class="message senderMessage" data-bind="message"></p>
+    <div class="chatMessage userMessage">
+        <p class="message" data-bind="message"></p>
+        <p class="time" data-bind="time"></p>
+    </div>
     `
 }
 
