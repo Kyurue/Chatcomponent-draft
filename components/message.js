@@ -9,9 +9,6 @@ class Message extends HTMLElement {
     constructor(message) {
         super();
         this.shadowRoot = this.attachShadow({mode: 'open'});
-        this.state = {
-            message: message,
-        };
         this.applyTemplate();
         this.attachStyling();
         this.setState('message', message);

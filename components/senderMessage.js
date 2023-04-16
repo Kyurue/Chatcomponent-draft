@@ -9,9 +9,6 @@ class SenderMessage extends HTMLElement {
     constructor(message) {
         super(); // always call super() first in the ctor.
         this.shadowRoot = this.attachShadow({mode: 'open'});
-        this.state = {
-            message: message,
-        };
         this.applyTemplate();
         this.attachStyling();
         this.setState('message', message);
