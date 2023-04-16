@@ -10,7 +10,7 @@ const messageComponent = new Message("Test");
 const senderComponent = new SenderMessage("Test")
 
 //append components
-var chat = document.getElementById("chat");
+const chat = document.getElementById("chat");
 chat.prepend(senderComponent);
 chat.prepend(messageComponent);
 
